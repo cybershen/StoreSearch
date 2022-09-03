@@ -13,6 +13,7 @@
 		DE99F06428C3D62D00B2FAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE99F06228C3D62D00B2FAE1 /* Main.storyboard */; };
 		DE99F06628C3D63000B2FAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE99F06528C3D63000B2FAE1 /* Assets.xcassets */; };
 		DE99F06928C3D63000B2FAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE99F06728C3D63000B2FAE1 /* LaunchScreen.storyboard */; };
+		DE99F07128C3E04300B2FAE1 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99F07028C3E04300B2FAE1 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DE99F06528C3D63000B2FAE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE99F06828C3D63000B2FAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE99F06A28C3D63000B2FAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE99F07028C3E04300B2FAE1 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
 				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
+				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
 				DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */,
 				DE99F06228C3D62D00B2FAE1 /* Main.storyboard */,
 				DE99F06528C3D63000B2FAE1 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				DE99F06128C3D62D00B2FAE1 /* SearchViewController.swift in Sources */,
 				DE99F05D28C3D62D00B2FAE1 /* AppDelegate.swift in Sources */,
+				DE99F07128C3E04300B2FAE1 /* SearchResult.swift in Sources */,
 				DE99F05F28C3D62D00B2FAE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
