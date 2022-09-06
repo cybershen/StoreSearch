@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     var searchResults = [SearchResult]()
     var hasSearched = false
     var isLoading = false
+    var dataTask: URLSessionDataTask?
     
     struct TableView {
         struct CellIdentifiers {
@@ -72,6 +73,7 @@ extension SearchViewController: UISearchBarDelegate {
             searchBar.resignFirstResponder()
             
             isLoading = true
+            dataTask?.cancel()
             tableView.reloadData()
             
             hasSearched = true
@@ -79,10 +81,10 @@ extension SearchViewController: UISearchBarDelegate {
             
             let url = iTunesURL(searchText: searchBar.text!)
             let session = URLSession.shared
-            let dataTask = session.dataTask(with: url) { data, response, error in
+            dataTask = session.dataTask(with: url) { data, response, error in
                 
-                if let error = error {
-                    print("Failure! \(error.localizedDescription)")
+                if let error = error as NSError?, error.code == -999 {
+                    return
                 } else if let httpsResponse = response as? HTTPURLResponse, httpsResponse.statusCode == 200 {
                     
                     if let data = data {
@@ -106,7 +108,7 @@ extension SearchViewController: UISearchBarDelegate {
                   self.showNetworkError()
                 }
             }
-            dataTask.resume()
+            dataTask?.resume()
         }
     }
     
