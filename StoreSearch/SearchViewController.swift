@@ -14,11 +14,13 @@ class SearchViewController: UIViewController {
     
     var searchResults = [SearchResult]()
     var hasSearched = false
+    var isLoading = false
     
     struct TableView {
         struct CellIdentifiers {
             static let searchResultCell = "SearchResultCell"
             static let nothingFoundCell = "NothingFoundCell"
+            static let loadingCell = "LoadingCell"
         }
     }
     
@@ -29,6 +31,8 @@ class SearchViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.searchResultCell)
         cellNib = UINib(nibName: TableView.CellIdentifiers.nothingFoundCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.nothingFoundCell)
+        cellNib = UINib(nibName: TableView.CellIdentifiers.loadingCell, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
         
         searchBar.becomeFirstResponder()
     }
@@ -77,17 +81,26 @@ extension SearchViewController: UISearchBarDelegate {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
             
+            isLoading = true
+            tableView.reloadData()
+            
             hasSearched = true
             searchResults = []
             
-            let url = iTunesURL(searchText: searchBar.text!)
-            print("URL - \(url)")
+            let queue = DispatchQueue.global()
+            let url = self.iTunesURL(searchText: searchBar.text!)
             
-            if let data = performStoreRequest(with: url) {
-                searchResults = parse(data: data)
-                searchResults.sort(by: <)
+            queue.async {
+                if let data = self.performStoreRequest(with: url) {
+                    self.searchResults = self.parse(data: data)
+                    self.searchResults.sort(by: <)
+                    
+                    DispatchQueue.main.async {
+                      self.isLoading = false
+                      self.tableView.reloadData()
+                    }
+                }
             }
-            tableView.reloadData()
         }
     }
     
@@ -100,8 +113,14 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if searchResults.count == 0 {
+        if isLoading {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.loadingCell, for: indexPath)
+            
+            let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
+            spinner.startAnimating()
+            
+            return cell
+        } else if searchResults.count == 0 {
             return tableView.dequeueReusableCell(
                 withIdentifier: TableView.CellIdentifiers.nothingFoundCell,
                 for: indexPath)
@@ -121,7 +140,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !hasSearched {
+        if isLoading {
+            return 1
+        } else if !hasSearched {
             return 0
         } else if searchResults.count == 0 {
             return 1
@@ -130,16 +151,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if searchResults.count == 0 {
+        if searchResults.count == 0 || isLoading {
             return nil
         } else {
             return indexPath
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
