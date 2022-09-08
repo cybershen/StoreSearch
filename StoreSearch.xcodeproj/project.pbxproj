@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE32524F28C9DC2000D5C323 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32524E28C9DC2000D5C323 /* DetailViewController.swift */; };
 		DE99F05D28C3D62D00B2FAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */; };
 		DE99F05F28C3D62D00B2FAE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */; };
 		DE99F06128C3D62D00B2FAE1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE32524E28C9DC2000D5C323 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE99F05928C3D62D00B2FAE1 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
 				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
 				DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */,
+				DE32524E28C9DC2000D5C323 /* DetailViewController.swift */,
 				DEBA3F3A28C87D01004906DD /* UIImageView+DownloadImage.swift..swift */,
 				DED4E84328C7455300D999EE /* LoadingCell.xib */,
 				DEC0A31C28C5DE72005781DF /* SearchResultCell.xib */,
@@ -161,6 +164,7 @@
 				DE99F05F28C3D62D00B2FAE1 /* SceneDelegate.swift in Sources */,
 				DEBA3F3B28C87D01004906DD /* UIImageView+DownloadImage.swift..swift in Sources */,
 				DEC0A31F28C5E15F005781DF /* SearchResultCell.swift in Sources */,
+				DE32524F28C9DC2000D5C323 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
