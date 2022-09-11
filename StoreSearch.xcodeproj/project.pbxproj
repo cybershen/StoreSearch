@@ -18,6 +18,7 @@
 		DEC0A31D28C5DE72005781DF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC0A31C28C5DE72005781DF /* SearchResultCell.xib */; };
 		DEC0A31F28C5E15F005781DF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */; };
 		DEC0A32128C5E25A005781DF /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC0A32028C5E25A005781DF /* NothingFoundCell.xib */; };
+		DECB2E4C28CD1FBE00FFCC11 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */; };
 		DED4E84428C7455300D999EE /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED4E84328C7455300D999EE /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		DEC0A31C28C5DE72005781DF /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		DEC0A32028C5E25A005781DF /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DED4E84328C7455300D999EE /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 			children = (
 				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
 				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
+				DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */,
 				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
 				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
 				DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */,
@@ -164,6 +167,7 @@
 				DE99F05F28C3D62D00B2FAE1 /* SceneDelegate.swift in Sources */,
 				DEBA3F3B28C87D01004906DD /* UIImageView+DownloadImage.swift..swift in Sources */,
 				DEC0A31F28C5E15F005781DF /* SearchResultCell.swift in Sources */,
+				DECB2E4C28CD1FBE00FFCC11 /* GradientView.swift in Sources */,
 				DE32524F28C9DC2000D5C323 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
