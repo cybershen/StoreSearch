@@ -19,6 +19,12 @@ class DetailViewController: UIViewController {
     
     var searchResult: SearchResult!
     var downloadTask: URLSessionDownloadTask?
+    var dismissStyle = AnimationStyle.fade
+    
+    enum AnimationStyle {
+        case slide
+        case fade
+    }
     
     deinit {
         downloadTask?.cancel()
@@ -90,6 +96,7 @@ class DetailViewController: UIViewController {
     
     
     @objc func close() {
+        dismissStyle = .slide
         dismiss(animated: true)
     }
 }
@@ -99,5 +106,16 @@ extension DetailViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return (touch.view === self.view)
+    }
+}
+
+extension DetailViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissStyle {
+        case .slide:
+            return SlideOutAnimationController()
+        case .fade:
+            return FadeOutAnimationController()
+        }
     }
 }

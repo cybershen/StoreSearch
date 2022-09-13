@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE138E0528D064CC0072059B /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE138E0428D064CC0072059B /* LandscapeViewController.swift */; };
+		DE138E0728D071E30072059B /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE138E0628D071E30072059B /* FadeOutAnimationController.swift */; };
+		DE138E0928D0739E0072059B /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE138E0828D0739E0072059B /* SlideOutAnimationController.swift */; };
 		DE32524F28C9DC2000D5C323 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32524E28C9DC2000D5C323 /* DetailViewController.swift */; };
 		DE99F05D28C3D62D00B2FAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */; };
 		DE99F05F28C3D62D00B2FAE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE138E0428D064CC0072059B /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
+		DE138E0628D071E30072059B /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
+		DE138E0828D0739E0072059B /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		DE32524E28C9DC2000D5C323 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE99F05928C3D62D00B2FAE1 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,11 +79,14 @@
 				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
 				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
 				DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */,
+				DEBA3F3A28C87D01004906DD /* UIImageView+DownloadImage.swift..swift */,
+				DE138E0628D071E30072059B /* FadeOutAnimationController.swift */,
+				DE138E0828D0739E0072059B /* SlideOutAnimationController.swift */,
 				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
 				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
 				DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */,
 				DE32524E28C9DC2000D5C323 /* DetailViewController.swift */,
-				DEBA3F3A28C87D01004906DD /* UIImageView+DownloadImage.swift..swift */,
+				DE138E0428D064CC0072059B /* LandscapeViewController.swift */,
 				DED4E84328C7455300D999EE /* LoadingCell.xib */,
 				DEC0A31C28C5DE72005781DF /* SearchResultCell.xib */,
 				DEC0A32028C5E25A005781DF /* NothingFoundCell.xib */,
@@ -162,11 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE99F06128C3D62D00B2FAE1 /* SearchViewController.swift in Sources */,
+				DE138E0528D064CC0072059B /* LandscapeViewController.swift in Sources */,
 				DE99F05D28C3D62D00B2FAE1 /* AppDelegate.swift in Sources */,
 				DE99F07128C3E04300B2FAE1 /* SearchResult.swift in Sources */,
 				DE99F05F28C3D62D00B2FAE1 /* SceneDelegate.swift in Sources */,
 				DEBA3F3B28C87D01004906DD /* UIImageView+DownloadImage.swift..swift in Sources */,
+				DE138E0728D071E30072059B /* FadeOutAnimationController.swift in Sources */,
 				DEC0A31F28C5E15F005781DF /* SearchResultCell.swift in Sources */,
+				DE138E0928D0739E0072059B /* SlideOutAnimationController.swift in Sources */,
 				DECB2E4C28CD1FBE00FFCC11 /* GradientView.swift in Sources */,
 				DE32524F28C9DC2000D5C323 /* DetailViewController.swift in Sources */,
 			);
