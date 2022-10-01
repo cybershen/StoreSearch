@@ -15,7 +15,7 @@ class LandscapeViewController: UIViewController {
     var searchResults = [SearchResult]()
     
     private var firstTime = true
-    private var downloads = [URLSessionDataTask]()
+    private var downloads = [URLSessionDownloadTask]()
     
     deinit {
         print("deinit \(self)")
