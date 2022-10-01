@@ -109,7 +109,9 @@ extension DetailViewController: UIGestureRecognizerDelegate {
     }
 }
 
+// MARK: - View Controller Transition Delegate
 extension DetailViewController: UIViewControllerTransitioningDelegate {
+    
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch dismissStyle {
         case .slide:

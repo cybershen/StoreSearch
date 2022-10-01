@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="51" width="667" height="32"/>
                                 <items>
                                     <barButtonItem style="plain" id="QSY-Hn-V6q">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="NaL-Qr-bFv">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="NaL-Qr-bFv">
                                             <rect key="frame" x="20" y="0.0" width="627" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -218,20 +218,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're in landscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHq-ap-A9j">
-                                <rect key="frame" x="261" y="177" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YLY-4w-j05">
+                                <rect key="frame" x="275" y="174" width="116" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aos-BA-sNW">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Vas-9L-6Or"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vrh-cD-Yqs"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GaJ-w0-yRA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="mHq-ap-A9j" firstAttribute="centerX" secondItem="xxo-rY-ek7" secondAttribute="centerX" id="2Wr-nG-K2b"/>
-                            <constraint firstItem="mHq-ap-A9j" firstAttribute="centerY" secondItem="xxo-rY-ek7" secondAttribute="centerY" id="Dbt-YO-Bu5"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="YLY-4w-j05" id="wmM-kQ-J7T"/>
+                        <outlet property="scrollView" destination="aos-BA-sNW" id="gtH-Zb-4pi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avm-nU-rea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
