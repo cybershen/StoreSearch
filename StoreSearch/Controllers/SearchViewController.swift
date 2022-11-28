@@ -8,7 +8,6 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -120,7 +119,6 @@ class SearchViewController: UIViewController {
 
 // MARK: - Search Bar Delegate
 extension SearchViewController: UISearchBarDelegate {
-    
     func performSearch() {
         if let category = Search.Category(rawValue: segmentedControl.selectedSegmentIndex) {
             search.performSearch(for: searchBar.text!, category: category) { success in
@@ -146,7 +144,6 @@ extension SearchViewController: UISearchBarDelegate {
 
 // MARK: - Table View Delegate
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch search.state {
         case .notSearchedYet:

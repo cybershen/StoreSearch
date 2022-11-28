@@ -8,7 +8,6 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -94,7 +93,6 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
     @objc func close() {
         dismissStyle = .slide
         dismiss(animated: true)
@@ -103,7 +101,6 @@ class DetailViewController: UIViewController {
 
 // MARK: - Gesture Recognizer Delegate
 extension DetailViewController: UIGestureRecognizerDelegate {
-    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return (touch.view === self.view)
     }
@@ -111,7 +108,6 @@ extension DetailViewController: UIGestureRecognizerDelegate {
 
 // MARK: - View Controller Transition Delegate
 extension DetailViewController: UIViewControllerTransitioningDelegate {
-    
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch dismissStyle {
         case .slide:

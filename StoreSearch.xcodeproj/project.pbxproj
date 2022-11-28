@@ -59,6 +59,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE8E52912935605A008AA394 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
+				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE8E529229356061008AA394 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
+				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
+				DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */,
+				DEBA3F3A28C87D01004906DD /* UIImageView+DownloadImage.swift..swift */,
+				DED4E84328C7455300D999EE /* LoadingCell.xib */,
+				DEC0A31C28C5DE72005781DF /* SearchResultCell.xib */,
+				DEC0A32028C5E25A005781DF /* NothingFoundCell.xib */,
+				DE99F06228C3D62D00B2FAE1 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE8E529329356067008AA394 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE138E0628D071E30072059B /* FadeOutAnimationController.swift */,
+				DE138E0828D0739E0072059B /* SlideOutAnimationController.swift */,
+				DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */,
+				DE32524E28C9DC2000D5C323 /* DetailViewController.swift */,
+				DE138E0428D064CC0072059B /* LandscapeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DE8E5294293560BD008AA394 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DE95A3E828E89C95006396F7 /* Search.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		DE99F05028C3D62C00B2FAE1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,22 +122,10 @@
 		DE99F05B28C3D62D00B2FAE1 /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
-				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
-				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
-				DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */,
-				DE95A3E828E89C95006396F7 /* Search.swift */,
-				DEBA3F3A28C87D01004906DD /* UIImageView+DownloadImage.swift..swift */,
-				DE138E0628D071E30072059B /* FadeOutAnimationController.swift */,
-				DE138E0828D0739E0072059B /* SlideOutAnimationController.swift */,
-				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
-				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
-				DE99F06028C3D62D00B2FAE1 /* SearchViewController.swift */,
-				DE32524E28C9DC2000D5C323 /* DetailViewController.swift */,
-				DE138E0428D064CC0072059B /* LandscapeViewController.swift */,
-				DED4E84328C7455300D999EE /* LoadingCell.xib */,
-				DEC0A31C28C5DE72005781DF /* SearchResultCell.xib */,
-				DEC0A32028C5E25A005781DF /* NothingFoundCell.xib */,
-				DE99F06228C3D62D00B2FAE1 /* Main.storyboard */,
+				DE8E5294293560BD008AA394 /* Managers */,
+				DE8E529329356067008AA394 /* Controllers */,
+				DE8E529229356061008AA394 /* Views */,
+				DE8E52912935605A008AA394 /* Model */,
 				DE99F06528C3D63000B2FAE1 /* Assets.xcassets */,
 				DE99F06A28C3D63000B2FAE1 /* Info.plist */,
 			);
