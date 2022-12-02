@@ -9,6 +9,4 @@ Storyboard Autolayout
 Some animations
 ```
 
-<img src="https://user-images.githubusercontent.com/112777366/205377603-907aa4a4-79ff-4e78-a93b-b03a3f49453b.gif" width="320" height="640">    <img src="\https://user-images.githubusercontent.com/112777366/205377607-5064bcee-caae-4eb7-8db4-4db2dbaa0303.gif" width="320" height="640">
-<img src="https://user-images.githubusercontent.com/112777366/205377880-24c4147b-4a69-4974-be8a-ffd3bd721964.gif" width="640" height="320">
-
+<img src="https://user-images.githubusercontent.com/112777366/205378015-376764e3-94f3-4d4c-abdd-902edaa5184d.gif" width="320" height="640">    <img src="https://user-images.githubusercontent.com/112777366/205378022-e626ab87-cfcf-48c4-8008-878a6c60ba82.gif" width="320" height="640">
