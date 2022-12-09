@@ -8,7 +8,6 @@
 import Foundation
 
 class Search {
-    
     typealias SearchComplete = (Bool) -> Void
     
     private var dataTask: URLSessionDataTask?

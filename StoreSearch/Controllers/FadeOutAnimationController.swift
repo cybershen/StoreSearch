@@ -8,7 +8,6 @@
 import UIKit
 
 class FadeOutAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
-    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.4
     }
