@@ -63,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				DE99F07028C3E04300B2FAE1 /* SearchResult.swift */,
-				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -71,8 +70,7 @@
 		DE8E529229356061008AA394 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
-				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
+				DEC0A31E28C5E15F005781DF /* SearchResultCell.swift */,
 				DECB2E4B28CD1FBE00FFCC11 /* GradientView.swift */,
 				DEBA3F3A28C87D01004906DD /* UIImageView+DownloadImage.swift..swift */,
 				DED4E84328C7455300D999EE /* LoadingCell.xib */,
@@ -122,6 +120,7 @@
 		DE99F05B28C3D62D00B2FAE1 /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DEFD55D729476596005DE6B6 /* Resources */,
 				DE8E5294293560BD008AA394 /* Managers */,
 				DE8E529329356067008AA394 /* Controllers */,
 				DE8E529229356061008AA394 /* Views */,
@@ -130,6 +129,15 @@
 				DE99F06A28C3D63000B2FAE1 /* Info.plist */,
 			);
 			path = StoreSearch;
+			sourceTree = "<group>";
+		};
+		DEFD55D729476596005DE6B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE99F05C28C3D62D00B2FAE1 /* AppDelegate.swift */,
+				DE99F05E28C3D62D00B2FAE1 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
