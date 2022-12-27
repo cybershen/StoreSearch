@@ -5,7 +5,7 @@ Features
 ```
 MVC architecture
 iTunes Search API 
-Storyboard Autolayout
+Storyboard 
 Some animations
 ```
 
